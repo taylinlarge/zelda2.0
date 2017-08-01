@@ -1,0 +1,114 @@
+.wrapper {
+	
+	.ground {
+		position: absolute;
+		width: 130%;
+		top: 270%;
+		left: 53%;
+		transform: translate(-50%, -50%);
+
+		img{
+			width: 100%;
+		}
+	}
+
+	.lake {
+		position: absolute;
+		width: 28%;
+		top: 243%;
+		left: 19.8%;
+		//z-index: 1;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.ranch {
+		position: absolute;
+		width: 18%;
+		top: 220%;
+		left: 37%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.castle {
+		position: absolute;
+		width: 24%;
+		top: 165%;
+		left: 34%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.forest {
+		position: absolute;
+		width: 32%;
+		top: 205%;
+		right: 8%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.death-mountain {
+		position: absolute;
+		width: 13%;
+		top: 155%;
+		right: 36%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.grass-light {
+		position: absolute;
+		width: 100%;
+		top: 300%;
+		left: 0;
+		z-index: 2;
+		// overflow: hidden;
+
+		img {
+			width: 100%;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

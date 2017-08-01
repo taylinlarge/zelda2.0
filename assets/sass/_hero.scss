@@ -1,0 +1,248 @@
+.wrapper {
+	width: 100%;
+	height: 100%;
+	overflow-y: visible;
+	overflow-x: hidden;
+	position: absolute;
+
+	.background {
+		position: absolute;
+	    width: 220%;
+	    top: -60%;
+	    left: -50%;
+	    transform-origin: center;
+	  //   animation-name: NightDay;
+	  //   animation-iteration-count: infinite;
+	  //   animation-duration: 100s;
+	  //   animation-timing-function: linear;
+
+	  //   @keyframes NightDay {
+			// from {
+			// 	transform: rotate(0deg);
+			// }
+
+			// to {
+			// 	transform: rotate(360deg);
+			// }
+	  //   }
+
+	    img {
+	    	width: 100%;
+	    }
+	}
+
+	.dark-clouds {
+		position: absolute;
+		width: 100%;
+		top: -100px;
+		z-index: 1;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.white-clouds {
+		position: absolute;
+		width: 100%;
+		top: 0px;
+		left: 0;
+		z-index: 1;
+
+		img {
+			width: 100%;
+			position: relative;
+			top: -100px;
+		}
+	}
+
+	.banner {
+		position: absolute;
+	    top: 5%;
+	    left: 10%;
+	    z-index: 5;
+	    width: 80%;
+
+	    img {
+	    	width: 100%;
+	    }
+	}
+
+	.tingle {
+		position: absolute;
+	    top: 0%;
+	    overflow: hidden;
+	    left: 37%;
+	    z-index: 0;
+
+	    img {
+	    	width: 100%;
+	    }
+	}
+
+	.welcome {
+		position: absolute;
+	    top: 30%;
+	    left: 45%;
+	    width: 25%;
+
+	    img {
+	    	width: 100%;
+	    }
+	}
+
+	.triforce {
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		width: 15%;
+		transform: translate(-50%, -50%);
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.sun {
+		position: absolute;
+		width: 13%;
+		top: 85%;
+		left: 55%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.moon {
+		position: absolute;
+		width: 13%;
+		top: 35%;
+		left: 25%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.star-1 {
+		position: absolute;
+		width: 0.5%;
+		top: 30%;
+		left: 52%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.star-2 {
+		position: absolute;
+		width: 0.5%;
+		top: 37%;
+		left: 25%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.star-3 {
+		position: absolute;
+		width: 0.5%;
+		top: 87%;
+		left: 22%;
+
+		img {
+			width: 100%;
+		}
+	}	
+
+	.star-4 {
+		position: absolute;
+		width: 0.5%;
+		top: 70%;
+		left: 30%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.star-5 {
+		position: absolute;
+		width: 0.5%;
+		top: 84%;
+		left: 48%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.star-6 {
+		position: absolute;
+		width: 0.5%;
+		top: 91%;
+		left: 70%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.star-7 {
+		position: absolute;
+		width: 0.5%;
+		top: 39%;
+		left: 74%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.ocarina {
+		position: absolute;
+		width: 10%;
+		top: 55%;
+		left: 62%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

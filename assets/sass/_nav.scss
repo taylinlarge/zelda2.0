@@ -1,0 +1,20 @@
+nav {
+	position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+
+	ul {
+		display: flex;
+		justify-content: space-around;
+		list-style-type: none;
+		margin: 0;
+
+		a {
+			text-decoration: none;
+			color: white;
+			font-size: 1em;
+		}
+	}
+}
