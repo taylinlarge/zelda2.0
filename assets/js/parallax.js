@@ -143,7 +143,7 @@ var MAGIC_NUMBER = 30,
   frictionY: 0.1,
   originX: 0.5,
   originY: 0.5,
-  pointerEvents: false,
+  pointerEvents: true,
   precision: 1
 };
 
@@ -280,8 +280,8 @@ var Parallax = function () {
 
         layer.style.position = index ? 'absolute' : 'relative';
         layer.style.display = 'block';
-        layer.style.left = 0;
-        layer.style.top = 0;
+        // layer.style.left = 0;
+        // layer.style.top = 0;
 
         var depth = helpers.data(layer, 'depth') || 0;
         this.depthsX.push(helpers.data(layer, 'depth-x') || depth);

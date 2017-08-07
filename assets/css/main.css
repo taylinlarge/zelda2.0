@@ -377,6 +377,31 @@ html, body {
   width: 100%;
   margin: 0; }
 
+@font-face {
+  font-family: 'ganon';
+  src: url(../fonts/ReturnofGanon.ttf); }
+
+.wrapper .modal {
+  position: absolute;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 10000; }
+  .wrapper .modal .modal-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    width: 50%;
+    border-radius: 15px;
+    transform: translate(-50%, -50%); }
+    .wrapper .modal .modal-message p {
+      margin: 0;
+      padding: 10%;
+      color: black; }
+
 nav {
   position: absolute;
   width: 50%;
@@ -401,24 +426,26 @@ nav {
   position: absolute; }
   .wrapper .background {
     position: absolute;
-    width: 220%;
-    top: -60%;
-    left: -50%;
-    transform-origin: center; }
+    width: 100%;
+    top: -10px;
+    left: 0%;
+    transform-origin: center;
+    transform: rotate(180deg); }
     .wrapper .background img {
       width: 100%; }
   .wrapper .dark-clouds {
     position: absolute;
-    width: 100%;
+    width: 110%;
     top: -100px;
+    left: -50px;
     z-index: 1; }
     .wrapper .dark-clouds img {
       width: 100%; }
   .wrapper .white-clouds {
     position: absolute;
-    width: 100%;
-    top: 0px;
-    left: 0;
+    width: 110%;
+    top: -20px;
+    left: -50px;
     z-index: 1; }
     .wrapper .white-clouds img {
       width: 100%;
@@ -434,18 +461,11 @@ nav {
       width: 100%; }
   .wrapper .tingle {
     position: absolute;
-    top: 0%;
-    overflow: hidden;
-    left: 37%;
-    z-index: 0; }
+    top: -134%;
+    left: 32%;
+    z-index: 0;
+    width: 10%; }
     .wrapper .tingle img {
-      width: 100%; }
-  .wrapper .welcome {
-    position: absolute;
-    top: 30%;
-    left: 45%;
-    width: 25%; }
-    .wrapper .welcome img {
       width: 100%; }
   .wrapper .triforce {
     position: absolute;
@@ -458,15 +478,15 @@ nav {
   .wrapper .sun {
     position: absolute;
     width: 13%;
-    top: 85%;
-    left: 55%; }
+    top: 35%;
+    left: 25%; }
     .wrapper .sun img {
       width: 100%; }
   .wrapper .moon {
     position: absolute;
     width: 13%;
-    top: 35%;
-    left: 25%; }
+    top: 85%;
+    left: 55%; }
     .wrapper .moon img {
       width: 100%; }
   .wrapper .star-1 {
@@ -522,66 +542,169 @@ nav {
     position: absolute;
     width: 10%;
     top: 55%;
-    left: 62%; }
+    left: 62%;
+    z-index: 4; }
     .wrapper .ocarina img {
       width: 100%; }
+  .wrapper .cloud-small {
+    position: absolute;
+    top: 106%;
+    left: 31%;
+    width: 10%; }
+    .wrapper .cloud-small img {
+      width: 100%; }
+  .wrapper .cloud-med {
+    position: absolute;
+    top: 112%;
+    left: 55%;
+    width: 18%; }
+    .wrapper .cloud-med img {
+      width: 100%; }
+  .wrapper .cloud-large {
+    position: absolute;
+    top: 120%;
+    left: 29%;
+    width: 35%; }
+    .wrapper .cloud-large img {
+      width: 100%; }
+  .wrapper .tingle-text {
+    font-family: 'ganon';
+    font-size: 1em;
+    color: white;
+    margin: 0;
+    padding: 10px; }
+  .wrapper .tingle-text-box {
+    position: absolute;
+    top: 88%;
+    left: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px black; }
 
 .wrapper .ground {
   position: absolute;
-  width: 130%;
-  top: 270%;
-  left: 53%;
+  width: 110%;
+  top: 280%;
+  left: 51%;
   transform: translate(-50%, -50%); }
   .wrapper .ground img {
     width: 100%; }
-
-.wrapper .lake {
-  position: absolute;
-  width: 28%;
-  top: 243%;
-  left: 19.8%; }
-  .wrapper .lake img {
-    width: 100%; }
-
-.wrapper .ranch {
-  position: absolute;
-  width: 18%;
-  top: 220%;
-  left: 37%; }
-  .wrapper .ranch img {
-    width: 100%; }
-
-.wrapper .castle {
-  position: absolute;
-  width: 24%;
-  top: 165%;
-  left: 34%; }
-  .wrapper .castle img {
-    width: 100%; }
-
-.wrapper .forest {
-  position: absolute;
-  width: 32%;
-  top: 205%;
-  right: 8%; }
-  .wrapper .forest img {
-    width: 100%; }
-
-.wrapper .death-mountain {
-  position: absolute;
-  width: 13%;
-  top: 155%;
-  right: 36%; }
-  .wrapper .death-mountain img {
-    width: 100%; }
+  .wrapper .ground .lake {
+    position: absolute;
+    width: 27%;
+    top: 38%;
+    left: 22%; }
+    .wrapper .ground .lake img {
+      width: 100%; }
+  .wrapper .ground .ranch {
+    position: absolute;
+    width: 18%;
+    top: 25%;
+    left: 35%; }
+    .wrapper .ground .ranch img {
+      width: 100%; }
+  .wrapper .ground .castle {
+    position: absolute;
+    width: 22%;
+    top: 4%;
+    left: 32%; }
+    .wrapper .ground .castle img {
+      width: 100%; }
+  .wrapper .ground .forest {
+    position: absolute;
+    width: 29%;
+    top: 21%;
+    right: 11%; }
+    .wrapper .ground .forest img {
+      width: 100%; }
+  .wrapper .ground .death-mountain {
+    position: absolute;
+    width: 12%;
+    top: -2%;
+    right: 38%; }
+    .wrapper .ground .death-mountain img {
+      width: 100%; }
 
 .wrapper .grass-light {
   position: absolute;
-  width: 100%;
+  width: 130%;
   top: 300%;
-  left: 0;
+  left: -10%;
   z-index: 2; }
   .wrapper .grass-light img {
     width: 100%; }
+
+.wrapper .grass-med {
+  position: absolute;
+  width: 130%;
+  top: 310%;
+  left: -10%;
+  z-index: 2; }
+  .wrapper .grass-med img {
+    width: 100%; }
+
+.wrapper .grass-dark {
+  position: absolute;
+  width: 130%;
+  top: 340%;
+  left: -10%;
+  z-index: 2; }
+  .wrapper .grass-dark img {
+    width: 100%; }
+
+.wrapper .rock {
+  position: absolute;
+  width: 130%;
+  top: 380%;
+  left: -10%;
+  z-index: 2; }
+  .wrapper .rock img {
+    width: 100%; }
+
+.wrapper .lake-click-area {
+  position: absolute;
+  top: 257%;
+  left: 19%;
+  width: 350px;
+  height: 320px;
+  z-index: 4; }
+
+.wrapper .death-mountain-click-area {
+  position: absolute;
+  top: 166%;
+  right: 36%;
+  width: 150px;
+  height: 150px;
+  z-index: 4; }
+
+.wrapper .castle-click-area {
+  position: absolute;
+  top: 184%;
+  left: 33%;
+  width: 300px;
+  height: 300px;
+  z-index: 4; }
+
+.wrapper .forest-click-area {
+  position: absolute;
+  top: 216%;
+  right: 7%;
+  width: 380px;
+  height: 380px;
+  z-index: 4; }
+
+.wrapper .ranch-click-area {
+  position: absolute;
+  top: 223%;
+  left: 36%;
+  width: 250px;
+  height: 210px;
+  z-index: 4; }
 
 /*# sourceMappingURL=main.css.map */
