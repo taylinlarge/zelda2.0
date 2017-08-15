@@ -381,7 +381,11 @@ html, body {
   font-family: 'ganon';
   src: url(../fonts/ReturnofGanon.ttf); }
 
-.wrapper .modal {
+@font-face {
+  font-family: 'Triforce';
+  src: url(../fonts/Triforce.ttf); }
+
+.modal {
   position: absolute;
   visibility: hidden;
   width: 100vw;
@@ -389,18 +393,757 @@ html, body {
   background-color: black;
   opacity: 0.7;
   z-index: 10000; }
-  .wrapper .modal .modal-message {
+  .modal .modal-message {
     position: absolute;
     top: 50%;
     left: 50%;
     background-color: white;
+    opacity: 1;
     width: 50%;
     border-radius: 15px;
     transform: translate(-50%, -50%); }
-    .wrapper .modal .modal-message p {
+    .modal .modal-message p {
       margin: 0;
       padding: 10%;
-      color: black; }
+      color: black;
+      font-family: 'Triforce'; }
+
+.wrapper .tingle {
+  position: absolute;
+  top: -500%;
+  left: 24%;
+  z-index: 4;
+  width: 10%; }
+  @media screen and (max-width: 480px) {
+    .wrapper .tingle {
+      position: absolute;
+      top: -52%;
+      left: 2%;
+      z-index: 4;
+      width: 27%; } }
+  .wrapper .tingle img {
+    width: 100%; }
+  .wrapper .tingle .intro-box {
+    position: absolute;
+    top: 88%;
+    left: 110%;
+    opacity: 0;
+    width: 200%; }
+    .wrapper .tingle .intro-box img {
+      width: 100%; }
+  .wrapper .tingle .death-mountain-box {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 88%;
+    left: -150%;
+    width: 200%; }
+    .wrapper .tingle .death-mountain-box img {
+      width: 100%; }
+  .wrapper .tingle .castle-box {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 88%;
+    left: -150%;
+    width: 200%; }
+    .wrapper .tingle .castle-box img {
+      width: 100%; }
+  .wrapper .tingle .ranch-box {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 88%;
+    left: -150%;
+    width: 200%; }
+    .wrapper .tingle .ranch-box img {
+      width: 100%; }
+  .wrapper .tingle .forest-box {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 88%;
+    left: -150%;
+    width: 200%; }
+    .wrapper .tingle .forest-box img {
+      width: 100%; }
+  .wrapper .tingle .lake-box {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 88%;
+    width: 200%;
+    left: -150%; }
+    .wrapper .tingle .lake-box img {
+      width: 100%; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-y: visible;
+  overflow-x: hidden;
+  position: absolute; }
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh; } }
+  .wrapper .mobile-map-link {
+    display: none; }
+    @media screen and (max-width: 480px) {
+      .wrapper .mobile-map-link {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000; } }
+  .wrapper .background {
+    position: absolute;
+    width: 100%;
+    top: -10px;
+    left: 0%;
+    transform-origin: center;
+    transform: rotate(180deg);
+    z-index: -1; }
+    @media screen and (max-width: 480px) {
+      .wrapper .background {
+        transform: rotate(0); } }
+    .wrapper .background img {
+      width: 100%; }
+  .wrapper .banner {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    z-index: 5;
+    width: 80%; }
+    @media screen and (max-width: 480px) {
+      .wrapper .banner {
+        top: 15%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%); } }
+    .wrapper .banner img {
+      width: 100%; }
+    @media screen and (max-width: 480px) {
+      .wrapper .banner .hide-on-mobile {
+        display: none; } }
+    @media screen and (min-width: 480px) {
+      .wrapper .banner .hide-on-desktop {
+        display: none; } }
+    .wrapper .banner .nav-1 {
+      display: none; }
+      @media screen and (max-width: 480px) {
+        .wrapper .banner .nav-1 {
+          display: block;
+          position: absolute;
+          top: 77%;
+          right: 4%;
+          width: 7%; } }
+      .wrapper .banner .nav-1 img {
+        width: 100%; }
+  .wrapper .white-clouds {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 1; }
+    @media screen and (max-width: 480px) {
+      .wrapper .white-clouds {
+        height: 100%; } }
+    @media screen and (max-width: 480px) {
+      .wrapper .white-clouds .white-clouds-img {
+        display: none; } }
+    .wrapper .white-clouds img {
+      width: 110%;
+      position: relative;
+      top: -100px;
+      left: -24px;
+      z-index: 4;
+      pointer-events: none; }
+    .wrapper .white-clouds .dark-clouds {
+      position: absolute;
+      width: 110%;
+      top: 0%;
+      left: 0%;
+      z-index: 1;
+      pointer-events: none; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .dark-clouds {
+          display: none; } }
+      .wrapper .white-clouds .dark-clouds img {
+        width: 100%; }
+    .wrapper .white-clouds .dark-clouds-mobile-1 {
+      display: none; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .dark-clouds-mobile-1 {
+          display: block;
+          position: absolute;
+          top: -23%;
+          left: 61%;
+          width: 31%;
+          filter: brightness(80%);
+          transform: rotate(-90deg); } }
+      .wrapper .white-clouds .dark-clouds-mobile-1 img {
+        width: 100%; }
+    .wrapper .white-clouds .dark-clouds-mobile-2 {
+      display: none; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .dark-clouds-mobile-2 {
+          display: block;
+          position: absolute;
+          top: -28%;
+          left: 4%;
+          width: 33%;
+          transform: scaleX(-1) rotate(-90deg); } }
+      .wrapper .white-clouds .dark-clouds-mobile-2 img {
+        width: 100%; }
+    .wrapper .white-clouds .triforce {
+      position: absolute;
+      top: 18%;
+      left: 54%;
+      width: 15%;
+      transform: translate(-50%, -50%); }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .triforce {
+          top: 53%;
+          left: 57%;
+          width: 35%; } }
+      .wrapper .white-clouds .triforce img {
+        width: 100%; }
+    .wrapper .white-clouds .touch-icon {
+      display: none; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .touch-icon {
+          display: block;
+          position: absolute;
+          top: 64%;
+          left: 59%;
+          transform: translate(-50%, -50%);
+          width: 15%; } }
+      .wrapper .white-clouds .touch-icon img {
+        width: 100%; }
+    .wrapper .white-clouds .sun {
+      position: absolute;
+      width: 13%;
+      top: 14%;
+      left: 25%; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .sun {
+          display: none; } }
+      .wrapper .white-clouds .sun img {
+        width: 100%; }
+    .wrapper .white-clouds .moon {
+      position: absolute;
+      width: 13%;
+      top: 25%;
+      left: 55%; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .moon {
+          width: 22%;
+          top: 30%;
+          left: 23%; } }
+      .wrapper .white-clouds .moon img {
+        width: 100%; }
+    .wrapper .white-clouds .nav-2 {
+      display: none; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .nav-2 {
+          display: block;
+          position: absolute;
+          top: 45%;
+          right: 5%;
+          width: 15%; } }
+      .wrapper .white-clouds .nav-2 img {
+        width: 100%; }
+    .wrapper .white-clouds .star-1 {
+      position: absolute;
+      width: 0.5%;
+      top: 8%;
+      left: 52%; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .star-1 {
+          display: none; } }
+      .wrapper .white-clouds .star-1 img {
+        width: 100%; }
+    .wrapper .white-clouds .star-2 {
+      position: absolute;
+      width: 0.5%;
+      top: 16%;
+      left: 25%; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .star-2 {
+          display: none; } }
+      .wrapper .white-clouds .star-2 img {
+        width: 100%; }
+    .wrapper .white-clouds .star-3 {
+      position: absolute;
+      width: 0.5%;
+      top: 17%;
+      left: 22%; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .star-3 {
+          display: none; } }
+      .wrapper .white-clouds .star-3 img {
+        width: 100%; }
+    .wrapper .white-clouds .star-4 {
+      position: absolute;
+      width: 0.5%;
+      top: 19%;
+      left: 30%; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .star-4 {
+          display: none; } }
+      .wrapper .white-clouds .star-4 img {
+        width: 100%; }
+    .wrapper .white-clouds .star-5 {
+      position: absolute;
+      width: 0.5%;
+      top: 24%;
+      left: 48%; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .star-5 {
+          display: none; } }
+      .wrapper .white-clouds .star-5 img {
+        width: 100%; }
+    .wrapper .white-clouds .star-6 {
+      position: absolute;
+      width: 0.5%;
+      top: 19%;
+      left: 70%; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .star-6 {
+          display: none; } }
+      .wrapper .white-clouds .star-6 img {
+        width: 100%; }
+    .wrapper .white-clouds .star-7 {
+      position: absolute;
+      width: 0.5%;
+      top: 11%;
+      left: 74%; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .star-7 {
+          display: none; } }
+      .wrapper .white-clouds .star-7 img {
+        width: 100%; }
+    .wrapper .white-clouds .ocarina {
+      position: absolute;
+      width: 10%;
+      top: 20%;
+      left: 66%;
+      z-index: 4; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .ocarina {
+          width: 17%;
+          top: 104%;
+          left: 85%;
+          z-index: 10; } }
+      .wrapper .white-clouds .ocarina img {
+        width: 100%; }
+    .wrapper .white-clouds .cloud-small {
+      position: absolute;
+      top: 31%;
+      left: 31%;
+      width: 10%;
+      z-index: 0; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .cloud-small {
+          display: none; } }
+      .wrapper .white-clouds .cloud-small img {
+        width: 100%; }
+    .wrapper .white-clouds .cloud-med {
+      position: absolute;
+      top: 33%;
+      left: 55%;
+      width: 18%;
+      z-index: 0; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .cloud-med {
+          display: none; } }
+      .wrapper .white-clouds .cloud-med img {
+        width: 100%; }
+    .wrapper .white-clouds .cloud-large {
+      position: absolute;
+      top: 36%;
+      left: 29%;
+      width: 35%;
+      z-index: 0; }
+      @media screen and (max-width: 480px) {
+        .wrapper .white-clouds .cloud-large {
+          display: none; } }
+      .wrapper .white-clouds .cloud-large img {
+        width: 100%; }
+
+.mobile-map {
+  display: none; }
+  @media screen and (max-width: 480px) {
+    .mobile-map {
+      width: 100%;
+      height: 100%;
+      display: block; } }
+  .mobile-map .background {
+    width: 100%; }
+    .mobile-map .background img {
+      width: 100%; }
+  .mobile-map .triforce-home-button {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    width: 10%;
+    z-index: 7; }
+    .mobile-map .triforce-home-button a {
+      width: 100%;
+      height: 100%; }
+    .mobile-map .triforce-home-button img {
+      width: 100%; }
+  .mobile-map .white-clouds {
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    overflow-x: hidden; }
+    @media screen and (max-width: 480px) {
+      .mobile-map .white-clouds {
+        height: 100%; } }
+    @media screen and (max-width: 480px) {
+      .mobile-map .white-clouds .white-clouds-img {
+        display: none; } }
+    .mobile-map .white-clouds img {
+      width: 110%;
+      position: relative;
+      top: -100px;
+      left: -24px;
+      z-index: 4;
+      pointer-events: none; }
+      @media screen and (max-width: 480px) {
+        .mobile-map .white-clouds img {
+          top: 0; } }
+    .mobile-map .white-clouds .dark-clouds {
+      position: absolute;
+      width: 110%;
+      top: 0%;
+      left: 0%;
+      z-index: 1;
+      pointer-events: none; }
+      @media screen and (max-width: 480px) {
+        .mobile-map .white-clouds .dark-clouds {
+          display: none; } }
+      .mobile-map .white-clouds .dark-clouds img {
+        width: 100%; }
+    .mobile-map .white-clouds .ocarina {
+      position: absolute;
+      width: 15%;
+      top: 1%;
+      left: 87%;
+      z-index: 100; }
+      .mobile-map .white-clouds .ocarina img {
+        width: 100%; }
+    .mobile-map .white-clouds .dark-clouds-mobile-1 {
+      display: none; }
+      @media screen and (max-width: 480px) {
+        .mobile-map .white-clouds .dark-clouds-mobile-1 {
+          display: block;
+          position: absolute;
+          top: -22%;
+          left: 40%;
+          width: 31%;
+          filter: brightness(80%);
+          transform: rotate(-90deg); } }
+      .mobile-map .white-clouds .dark-clouds-mobile-1 img {
+        width: 100%; }
+    .mobile-map .white-clouds .dark-clouds-mobile-2 {
+      display: none; }
+      @media screen and (max-width: 480px) {
+        .mobile-map .white-clouds .dark-clouds-mobile-2 {
+          display: block;
+          position: absolute;
+          top: -28%;
+          left: 29%;
+          width: 31%;
+          transform: scaleX(-1) rotate(-90deg); } }
+      .mobile-map .white-clouds .dark-clouds-mobile-2 img {
+        width: 100%; }
+
+.wrapper .ground {
+  position: absolute;
+  width: 110%;
+  top: 75%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  z-index: -2; }
+  @media screen and (max-width: 480px) {
+    .wrapper .ground {
+      display: none; } }
+  .wrapper .ground img {
+    width: 100%; }
+  .wrapper .ground .lake {
+    position: absolute;
+    width: 27%;
+    top: 38%;
+    left: 22%;
+    z-index: 4; }
+    .wrapper .ground .lake img {
+      width: 100%; }
+  .wrapper .ground .ranch {
+    position: absolute;
+    width: 18%;
+    top: 25%;
+    left: 35%;
+    z-index: 4; }
+    .wrapper .ground .ranch img {
+      width: 100%; }
+  .wrapper .ground .castle {
+    position: absolute;
+    width: 22%;
+    top: 4%;
+    left: 32%;
+    z-index: 4; }
+    .wrapper .ground .castle img {
+      width: 100%; }
+  .wrapper .ground .forest {
+    position: absolute;
+    width: 29%;
+    top: 21%;
+    right: 11%;
+    z-index: 4; }
+    .wrapper .ground .forest img {
+      width: 100%; }
+  .wrapper .ground .death-mountain {
+    position: absolute;
+    width: 12%;
+    top: -2%;
+    right: 38%;
+    z-index: 4; }
+    .wrapper .ground .death-mountain img {
+      width: 100%; }
+
+.wrapper .grass-light {
+  position: absolute;
+  width: 130%;
+  top: 80%;
+  left: -10%;
+  z-index: 5; }
+  @media screen and (max-width: 480px) {
+    .wrapper .grass-light {
+      width: 100%;
+      top: 93%;
+      left: 7%; } }
+  .wrapper .grass-light img {
+    width: 100%; }
+
+.wrapper .grass-med {
+  position: absolute;
+  width: 130%;
+  top: 82%;
+  left: -10%;
+  z-index: 5; }
+  @media screen and (max-width: 480px) {
+    .wrapper .grass-med {
+      width: 110%;
+      top: 85%;
+      left: 1%;
+      z-index: 4; } }
+  .wrapper .grass-med img {
+    width: 100%; }
+
+.wrapper .grass-dark {
+  position: absolute;
+  width: 130%;
+  top: 89%;
+  left: -10%;
+  z-index: 5; }
+  @media screen and (max-width: 480px) {
+    .wrapper .grass-dark {
+      display: none; } }
+  .wrapper .grass-dark img {
+    width: 100%; }
+
+.wrapper .rock {
+  position: absolute;
+  width: 130%;
+  top: 100%;
+  left: -10%;
+  z-index: 5; }
+  .wrapper .rock img {
+    width: 100%; }
+
+.wrapper .lake-click-area {
+  position: absolute;
+  top: 65%;
+  left: 19%;
+  width: 27%;
+  height: 11%;
+  z-index: 5; }
+  @media screen and (max-width: 480px) {
+    .wrapper .lake-click-area {
+      display: none; } }
+
+.wrapper .death-mountain-click-area {
+  position: absolute;
+  top: 42%;
+  right: 40%;
+  width: 10%;
+  height: 5.3%;
+  z-index: 5; }
+  @media screen and (max-width: 480px) {
+    .wrapper .death-mountain-click-area {
+      display: none; } }
+
+.wrapper .castle-click-area {
+  position: absolute;
+  top: 46%;
+  left: 31%;
+  width: 22%;
+  height: 10%;
+  z-index: 5; }
+  @media screen and (max-width: 480px) {
+    .wrapper .castle-click-area {
+      display: none; } }
+
+.wrapper .forest-click-area {
+  position: absolute;
+  top: 55%;
+  right: 9%;
+  width: 31%;
+  height: 11%;
+  z-index: 5; }
+  @media screen and (max-width: 480px) {
+    .wrapper .forest-click-area {
+      display: none; } }
+
+.wrapper .ranch-click-area {
+  position: absolute;
+  top: 57%;
+  left: 32%;
+  width: 20%;
+  height: 6%;
+  z-index: 5; }
+  @media screen and (max-width: 480px) {
+    .wrapper .ranch-click-area {
+      display: none; } }
+
+@media screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden; } }
+
+.mobile-map {
+  overflow-x: hidden; }
+  .mobile-map .tingle {
+    position: absolute; }
+    @media screen and (max-width: 480px) {
+      .mobile-map .tingle {
+        position: absolute;
+        width: 20%;
+        top: -41%;
+        left: 5%;
+        z-index: 6; } }
+    .mobile-map .tingle img {
+      width: 100%; }
+  .mobile-map .ground {
+    width: 100%;
+    position: absolute;
+    top: 40%; }
+    .mobile-map .ground .ground-img {
+      width: 500%;
+      left: -199%;
+      top: 0%; }
+    .mobile-map .ground .death-mountain {
+      position: absolute;
+      top: -1%;
+      width: 50%;
+      left: 30%; }
+      .mobile-map .ground .death-mountain .dm-icon {
+        width: 82%;
+        position: relative;
+        left: -1%; }
+      .mobile-map .ground .death-mountain .dm-text-box {
+        width: 140%;
+        position: relative;
+        left: -30%; }
+    .mobile-map .ground .ranch {
+      position: absolute;
+      top: 33%;
+      left: 30%;
+      width: 50%; }
+      .mobile-map .ground .ranch .ranch-icon {
+        width: 100%; }
+      .mobile-map .ground .ranch .ranch-text-box {
+        width: 140%;
+        position: relative;
+        left: -30%; }
+    .mobile-map .ground .castle {
+      position: absolute;
+      top: 13%;
+      left: 30%;
+      width: 50%; }
+      .mobile-map .ground .castle .castle-icon {
+        width: 100%;
+        left: -19%; }
+      .mobile-map .ground .castle .castle-text-box {
+        width: 140%;
+        position: relative;
+        left: -30%; }
+    .mobile-map .ground .forest {
+      position: absolute;
+      top: 64%;
+      left: 30%;
+      width: 50%; }
+      .mobile-map .ground .forest .forest-icon {
+        width: 100%; }
+      .mobile-map .ground .forest .forest-text-box {
+        width: 140%;
+        position: relative;
+        left: -30%; }
+    .mobile-map .ground .lake {
+      position: absolute;
+      top: 48%;
+      left: 30%;
+      width: 50%; }
+      .mobile-map .ground .lake .lake-icon {
+        width: 100%; }
+      .mobile-map .ground .lake .lake-text-box {
+        width: 140%;
+        position: relative;
+        left: -30%; }
+    .mobile-map .ground .zora {
+      position: absolute;
+      top: 78%;
+      left: 30%;
+      width: 50%; }
+      .mobile-map .ground .zora .zora-icon {
+        width: 100%; }
+      .mobile-map .ground .zora .zora-text-box {
+        width: 140%;
+        position: relative;
+        left: -30%; }
+  .mobile-map .grass-light {
+    width: 101%;
+    position: absolute;
+    top: 355%;
+    left: 6%;
+    z-index: 5; }
+    .mobile-map .grass-light img {
+      width: 100%; }
+  .mobile-map .grass-med {
+    width: 102%;
+    position: absolute;
+    top: 348%;
+    left: 5%;
+    z-index: 4; }
+    .mobile-map .grass-med img {
+      width: 100%; }
+  .mobile-map .rock {
+    width: 105%;
+    position: absolute;
+    top: 364%;
+    z-index: 5;
+    left: 3%; }
+    .mobile-map .rock img {
+      width: 100%; }
+  .mobile-map .hide-on-mobile {
+    display: none; }
 
 nav {
   position: absolute;
@@ -408,6 +1151,9 @@ nav {
   left: 50%;
   top: 64%;
   transform: translate(-50%, -50%); }
+  @media screen and (max-width: 480px) {
+    nav {
+      display: none; } }
   nav ul {
     display: flex;
     justify-content: space-around;
@@ -416,295 +1162,7 @@ nav {
     nav ul a {
       text-decoration: none;
       color: white;
-      font-size: 1em; }
-
-.wrapper {
-  width: 100%;
-  height: 100%;
-  overflow-y: visible;
-  overflow-x: hidden;
-  position: absolute; }
-  .wrapper .background {
-    position: absolute;
-    width: 100%;
-    top: -10px;
-    left: 0%;
-    transform-origin: center;
-    transform: rotate(180deg); }
-    .wrapper .background img {
-      width: 100%; }
-  .wrapper .dark-clouds {
-    position: absolute;
-    width: 110%;
-    top: -100px;
-    left: -50px;
-    z-index: 1; }
-    .wrapper .dark-clouds img {
-      width: 100%; }
-  .wrapper .white-clouds {
-    position: absolute;
-    width: 110%;
-    top: -20px;
-    left: -50px;
-    z-index: 1; }
-    .wrapper .white-clouds img {
-      width: 100%;
-      position: relative;
-      top: -100px; }
-  .wrapper .banner {
-    position: absolute;
-    top: 5%;
-    left: 10%;
-    z-index: 5;
-    width: 80%; }
-    .wrapper .banner img {
-      width: 100%; }
-  .wrapper .tingle {
-    position: absolute;
-    top: -134%;
-    left: 32%;
-    z-index: 0;
-    width: 10%; }
-    .wrapper .tingle img {
-      width: 100%; }
-  .wrapper .triforce {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 15%;
-    transform: translate(-50%, -50%); }
-    .wrapper .triforce img {
-      width: 100%; }
-  .wrapper .sun {
-    position: absolute;
-    width: 13%;
-    top: 35%;
-    left: 25%; }
-    .wrapper .sun img {
-      width: 100%; }
-  .wrapper .moon {
-    position: absolute;
-    width: 13%;
-    top: 85%;
-    left: 55%; }
-    .wrapper .moon img {
-      width: 100%; }
-  .wrapper .star-1 {
-    position: absolute;
-    width: 0.5%;
-    top: 30%;
-    left: 52%; }
-    .wrapper .star-1 img {
-      width: 100%; }
-  .wrapper .star-2 {
-    position: absolute;
-    width: 0.5%;
-    top: 37%;
-    left: 25%; }
-    .wrapper .star-2 img {
-      width: 100%; }
-  .wrapper .star-3 {
-    position: absolute;
-    width: 0.5%;
-    top: 87%;
-    left: 22%; }
-    .wrapper .star-3 img {
-      width: 100%; }
-  .wrapper .star-4 {
-    position: absolute;
-    width: 0.5%;
-    top: 70%;
-    left: 30%; }
-    .wrapper .star-4 img {
-      width: 100%; }
-  .wrapper .star-5 {
-    position: absolute;
-    width: 0.5%;
-    top: 84%;
-    left: 48%; }
-    .wrapper .star-5 img {
-      width: 100%; }
-  .wrapper .star-6 {
-    position: absolute;
-    width: 0.5%;
-    top: 91%;
-    left: 70%; }
-    .wrapper .star-6 img {
-      width: 100%; }
-  .wrapper .star-7 {
-    position: absolute;
-    width: 0.5%;
-    top: 39%;
-    left: 74%; }
-    .wrapper .star-7 img {
-      width: 100%; }
-  .wrapper .ocarina {
-    position: absolute;
-    width: 10%;
-    top: 55%;
-    left: 62%;
-    z-index: 4; }
-    .wrapper .ocarina img {
-      width: 100%; }
-  .wrapper .cloud-small {
-    position: absolute;
-    top: 106%;
-    left: 31%;
-    width: 10%; }
-    .wrapper .cloud-small img {
-      width: 100%; }
-  .wrapper .cloud-med {
-    position: absolute;
-    top: 112%;
-    left: 55%;
-    width: 18%; }
-    .wrapper .cloud-med img {
-      width: 100%; }
-  .wrapper .cloud-large {
-    position: absolute;
-    top: 120%;
-    left: 29%;
-    width: 35%; }
-    .wrapper .cloud-large img {
-      width: 100%; }
-  .wrapper .tingle-text {
-    font-family: 'ganon';
-    font-size: 1em;
-    color: white;
-    margin: 0;
-    padding: 10px; }
-  .wrapper .tingle-text-box {
-    position: absolute;
-    top: 88%;
-    left: 110%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 100px;
-    background-color: black;
-    opacity: 0.7;
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px black; }
-
-.wrapper .ground {
-  position: absolute;
-  width: 110%;
-  top: 280%;
-  left: 51%;
-  transform: translate(-50%, -50%); }
-  .wrapper .ground img {
-    width: 100%; }
-  .wrapper .ground .lake {
-    position: absolute;
-    width: 27%;
-    top: 38%;
-    left: 22%; }
-    .wrapper .ground .lake img {
-      width: 100%; }
-  .wrapper .ground .ranch {
-    position: absolute;
-    width: 18%;
-    top: 25%;
-    left: 35%; }
-    .wrapper .ground .ranch img {
-      width: 100%; }
-  .wrapper .ground .castle {
-    position: absolute;
-    width: 22%;
-    top: 4%;
-    left: 32%; }
-    .wrapper .ground .castle img {
-      width: 100%; }
-  .wrapper .ground .forest {
-    position: absolute;
-    width: 29%;
-    top: 21%;
-    right: 11%; }
-    .wrapper .ground .forest img {
-      width: 100%; }
-  .wrapper .ground .death-mountain {
-    position: absolute;
-    width: 12%;
-    top: -2%;
-    right: 38%; }
-    .wrapper .ground .death-mountain img {
-      width: 100%; }
-
-.wrapper .grass-light {
-  position: absolute;
-  width: 130%;
-  top: 300%;
-  left: -10%;
-  z-index: 2; }
-  .wrapper .grass-light img {
-    width: 100%; }
-
-.wrapper .grass-med {
-  position: absolute;
-  width: 130%;
-  top: 310%;
-  left: -10%;
-  z-index: 2; }
-  .wrapper .grass-med img {
-    width: 100%; }
-
-.wrapper .grass-dark {
-  position: absolute;
-  width: 130%;
-  top: 340%;
-  left: -10%;
-  z-index: 2; }
-  .wrapper .grass-dark img {
-    width: 100%; }
-
-.wrapper .rock {
-  position: absolute;
-  width: 130%;
-  top: 380%;
-  left: -10%;
-  z-index: 2; }
-  .wrapper .rock img {
-    width: 100%; }
-
-.wrapper .lake-click-area {
-  position: absolute;
-  top: 257%;
-  left: 19%;
-  width: 350px;
-  height: 320px;
-  z-index: 4; }
-
-.wrapper .death-mountain-click-area {
-  position: absolute;
-  top: 166%;
-  right: 36%;
-  width: 150px;
-  height: 150px;
-  z-index: 4; }
-
-.wrapper .castle-click-area {
-  position: absolute;
-  top: 184%;
-  left: 33%;
-  width: 300px;
-  height: 300px;
-  z-index: 4; }
-
-.wrapper .forest-click-area {
-  position: absolute;
-  top: 216%;
-  right: 7%;
-  width: 380px;
-  height: 380px;
-  z-index: 4; }
-
-.wrapper .ranch-click-area {
-  position: absolute;
-  top: 223%;
-  left: 36%;
-  width: 250px;
-  height: 210px;
-  z-index: 4; }
+      font-size: 1em;
+      font-family: 'Triforce'; }
 
 /*# sourceMappingURL=main.css.map */

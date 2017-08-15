@@ -2,11 +2,15 @@
 	
 	.ground {
 		position: absolute;
-		width: 110%;
-    	top: 280%;
-   		left: 51%;
-		transform: translate(-50%, -50%);
-		// z-index: 4;
+	    width: 110%;
+	    top: 75%;
+	    left: 51%;
+	    transform: translate(-50%, -50%);
+		z-index: -2;
+
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
 
 		img{
 			width: 100%;
@@ -17,7 +21,7 @@
 		    width: 27%;
 		    top: 38%;
 		    left: 22%;
-			// z-index: 4;
+			z-index: 4;
 			
 
 			img {
@@ -30,7 +34,7 @@
 		    width: 18%;
 		    top: 25%;
 		    left: 35%;
-			// z-index: 4;
+			z-index: 4;
 
 			img {
 				width: 100%;
@@ -42,7 +46,7 @@
 		    width: 22%;
 		    top: 4%;
 		    left: 32%;
-			// z-index: 4;
+			z-index: 4;
 
 			img {
 				width: 100%;
@@ -54,7 +58,7 @@
 		    width: 29%;
 		    top: 21%;
 		    right: 11%;
-			// z-index: 4;
+			z-index: 4;
 
 			img {
 				width: 100%;
@@ -66,7 +70,7 @@
 		    width: 12%;
 		    top: -2%;
 		    right: 38%;
-			// z-index: 4;
+			z-index: 4;
 
 			img {
 				width: 100%;
@@ -77,23 +81,36 @@
 
 	.grass-light {
 		position: absolute;
-		width: 130%;
-		top: 300%;
-		left: -10%;
-		z-index: 2;
+	    width: 130%;
+	    top: 80%;
+	    left: -10%;
+	    z-index: 5;
 		// overflow: hidden;
+
+		@media screen and (max-width: 480px) {
+		    width: 100%;
+		    top: 93%;
+		    left: 7%;
+		}
 
 		img {
 			width: 100%;
 		}
 	}
 	.grass-med {
-		position: absolute;
-		width: 130%;
-		top: 310%;
-		left: -10%;
-		z-index: 2;
+	    position: absolute;
+	    width: 130%;
+	    top: 82%;
+	    left: -10%;
+	    z-index: 5;
 		// overflow: hidden;
+
+		@media screen and (max-width: 480px) {
+		    width: 110%;
+		    top: 85%;
+		    left: 1%;
+		    z-index: 4;
+		}
 
 		img {
 			width: 100%;
@@ -101,12 +118,16 @@
 	}
 
 	.grass-dark {
-		position: absolute;
-		width: 130%;
-		top: 340%;
-		left: -10%;
-		z-index: 2;
+	    position: absolute;
+	    width: 130%;
+	    top: 89%;
+	    left: -10%;
+	    z-index: 5;
 		// overflow: hidden;
+
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
 
 		img {
 			width: 100%;
@@ -114,10 +135,10 @@
 	}
 	.rock {
 		position: absolute;
-		width: 130%;
-		top: 380%;
-		left: -10%;
-		z-index: 2;
+	    width: 130%;
+	    top: 100%;
+	    left: -10%;
+	    z-index: 5;
 		// overflow: hidden;
 
 		img {
@@ -127,49 +148,251 @@
 
 	.lake-click-area {
 		position: absolute;
-	    top: 257%;
+		top: 65%;
 	    left: 19%;
-	    width: 350px;
-	    height: 320px;
-		z-index: 4;
+	    width: 27%;
+	    height: 11%;
+		z-index: 5;
+
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
 	}
 
 	.death-mountain-click-area {
 		position: absolute;
-	    top: 166%;
-	    right: 36%;
-	    width: 150px;
-	    height: 150px;
-		z-index: 4;
+		top: 42%;
+	    right: 40%;
+	    width: 10%;
+	    height: 5.3%;
+		z-index: 5;
+
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
 	}
 	.castle-click-area {
 		position: absolute;
-		top: 184%;
-	    left: 33%;
-	    width: 300px;
-		height: 300px;
-		z-index: 4;
+		top: 46%;
+	    left: 31%;
+	    width: 22%;
+	    height: 10%;
+		z-index: 5;
+
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
 	}
 
 	.forest-click-area {
 		position: absolute;
-	    top: 216%;
-	    right: 7%;
-	    width: 380px;
-	    height: 380px;
-		z-index: 4;
+	    top: 55%;
+	    right: 9%;
+	    width: 31%;
+	    height: 11%;
+		z-index: 5;
+
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
 	}
 
 	.ranch-click-area {
 		position: absolute;
-	    top: 223%;
-	    left: 36%;
-	    width: 250px;
-	    height: 210px;
-		z-index: 4;
+		top: 57%;
+	    left: 32%;
+	    width: 20%;
+	    height: 6%;
+		z-index: 5;
+
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
 	}
 }
 
+body {
+	@media screen and (max-width: 480px) {
+			overflow-x: hidden;
+		}
+}
+
+.mobile-map {
+	overflow-x: hidden;
+
+	.tingle {
+		position: absolute;
+
+		@media screen and (max-width: 480px) {
+			position: absolute;
+		    width: 20%;
+		    top: -41%;
+		    left: 5%;
+		    z-index: 6;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.ground {
+		width: 100%;
+	    position: absolute;
+	    top: 40%;
+
+	    .ground-img {
+	    	width: 500%;
+		    left: -199%;
+		    top: 0%;
+	    }
+
+		.death-mountain {
+			position: absolute;
+		    top: -1%;
+		    width: 50%;
+		    left: 30%;
+
+		    .dm-icon {
+		    	width: 82%;
+		    	position: relative;
+		    	left: -1%;
+		    }
+
+		    .dm-text-box {
+	    	    width: 140%;
+			    position: relative;
+			    left: -30%;
+		    }
+		}
+
+		.ranch {
+			position: absolute;
+			top: 33%;
+			left: 30%;
+			width: 50%;
+
+			.ranch-icon {
+				width: 100%;
+			}
+			
+			.ranch-text-box {
+			    width: 140%;
+			    position: relative;
+			    left: -30%;
+			}
+		}
+
+		.castle {
+			position: absolute;
+			top: 13%;
+			left: 30%;
+			width: 50%;
+
+			.castle-icon {
+				width: 100%;
+				left: -19%;
+			}
+			
+			.castle-text-box {
+			    width: 140%;
+			    position: relative;
+			    left: -30%;
+			}
+		}
+
+		.forest {
+			position: absolute;
+			top: 64%;
+			left: 30%;
+			width: 50%;
+
+			.forest-icon {
+				width: 100%;
+			}
+			
+			.forest-text-box {
+			    width: 140%;
+			    position: relative;
+			    left: -30%;
+			}
+		}
+
+		.lake {
+			position: absolute;
+			top: 48%;
+			left: 30%;
+			width: 50%;
+
+			.lake-icon {
+				width: 100%;
+			}
+			
+			.lake-text-box {
+			    width: 140%;
+			    position: relative;
+			    left: -30%;
+			}
+		}
+
+		.zora {
+			position: absolute;
+			top: 78%;
+			left: 30%;
+			width: 50%;
+
+			.zora-icon {
+				width: 100%;
+			}
+			
+			.zora-text-box {
+			    width: 140%;
+			    position: relative;
+			    left: -30%;
+			}
+		}
+	}
+
+	.grass-light {
+		width: 101%;
+	    position: absolute;
+	    top: 355%;
+	    left: 6%;
+	    z-index: 5;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.grass-med {
+		width: 102%;
+	    position: absolute;
+	    top: 348%;
+	    left: 5%;
+	    z-index: 4;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.rock {
+		width: 105%;
+	    position: absolute;
+	    top: 364%;
+	    z-index: 5;
+	    left: 3%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.hide-on-mobile {
+		display: none;
+	}
+}
 
 
 

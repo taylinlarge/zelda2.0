@@ -1,17 +1,15 @@
 
 //parallax
 $(function(){
-	var scene = $('.wrapper').get(0);
 
-	var parallax = new Parallax(scene);
+	if($(window).width() >480 ) {
+
+		var scene = $('.white-clouds').get(0);
+
+		var parallax = new Parallax(scene);
+	}
 
 });
-
-// $(function(){
-// 	var earth = $('.earth-container').get(0);
-
-// 	var parallax = new Parallax(earth);
-// })
 
 // map hover areas
 
@@ -25,120 +23,117 @@ lakeArea.mouseenter( function(){
 	TweenMax.to('.lake', 0.5, {scale: 1.07});
 	TweenMax.to('.lake', 0.1, {x:"+=20", yoyo: true, repeat: 5});
 	TweenMax.to('.lake', 0.1, {x:"-=20", yoyo: true, repeat: 5});
+	TweenMax.to('.lake-box', 0.2, {opacity: 1, visibility: "visible"});
 
 });
 
 lakeArea.mouseleave(function(){
 	TweenMax.to('.lake', 1, {scale: 1});
+	TweenMax.to('.lake-box', 0.2, {opacity: 0, visibility: "hidden"});
 });
 
 castleArea.mouseenter( function(){
 	TweenMax.to('.castle', 1, {scale: 1.07});
 	TweenMax.to('.castle', 0.1, {x:"+=20", yoyo: true, repeat: 5});
 	TweenMax.to('.castle', 0.1, {x:"-=20", yoyo: true, repeat: 5});
+	TweenMax.to('.castle-box', 0.2, {opacity: 1, visibility: "visible"});
 
 });
 
 castleArea.mouseleave(function(){
 	TweenMax.to('.castle', 1, {scale: 1});
+	TweenMax.to('.castle-box', 0.2, {opacity: 0, visibility: "hidden"});
 });
 
 forestArea.mouseenter( function(){
 	TweenMax.to('.forest', 1, {scale: 1.07});
 	TweenMax.to('.forest', 0.1, {x:"+=20", yoyo: true, repeat: 5});
 	TweenMax.to('.forest', 0.1, {x:"-=20", yoyo: true, repeat: 5});
+	TweenMax.to('.forest-box', 0.2, {opacity: 1, visibility: "visible"});
 
 });
 
 forestArea.mouseleave(function(){
 	TweenMax.to('.forest', 1, {scale: 1});
+	TweenMax.to('.forest-box', 0.2, {opacity: 0, visibility: "hiden"});
 });
 
 mountainArea.mouseenter( function(){
 	TweenMax.to('.death-mountain', 1, {scale: 1.07});
 	TweenMax.to('.death-mountain', 0.1, {x:"+=20", yoyo: true, repeat: 5});
 	TweenMax.to('.death-mountain', 0.1, {x:"-=20", yoyo: true, repeat: 5});
+	TweenMax.to('.death-mountain-box', 0.2, {opacity: 1, visibility: "visible"});
 
 });
 
 mountainArea.mouseleave(function(){
 	TweenMax.to('.death-mountain', 1, {scale: 1});
+	TweenMax.to('.death-mountain-box', 0.2, {opacity: 0, visibility: "hidden"});
 });
 
 ranchArea.mouseenter( function(){
 	TweenMax.to('.ranch', 1, {scale: 1.07});
 	TweenMax.to('.ranch', 0.1, {x:"+=20", yoyo: true, repeat: 5});
 	TweenMax.to('.ranch', 0.1, {x:"-=20", yoyo: true, repeat: 5});
+	TweenMax.to('.ranch-box', 0.2, {opacity: 1, visibility: "visible"});
 
 });
 
 ranchArea.mouseleave(function(){
 	TweenMax.to('.ranch', 1, {scale: 1});
+	TweenMax.to('.ranch-box', 0.2, {opacity: 0, visibility: "hidden"});
 });
 
 
 //tingle
 var tingle = $('.tingle');
-var tingleTalkBox = $('<div>');
-var tingleWords = $('<p>');
-setTimeout(function(){
-	TweenMax.to( tingle, 2, {top: '-44%'});
-}, 5000);
 
-function makeTingleTalk() {
-	tingle.append(tingleTalkBox);
-	tingleTalkBox.addClass('tingle-text-box');
-	tingleTalkBox.append(tingleWords);
-	tingleWords.addClass('tingle-text');
-	tingleWords.html('Kooloo-Limpah! Welcome to Hyrule! My name is Tingle. I create maps for explorers such as yourself. Lets get started!');
-	TweenMax.from(tingleTalkBox, 1, {opacity: 0});
-	// tingle.css('position', 'fixed');
+function moveTingleIn(){
+	if($(window).width() > 480) {
+		TweenMax.to( tingle, 2, {top: '-44%'});
+	} else {
+		return;
+	}
 }
 
+function makeTingleTalk() {
+	if($(window).width() > 480) {
+		TweenMax.to('.intro-box', 1, {opacity: 1});
+		tingle.css('position', 'fixed');
+	} else {
+		return;
+	}
+}
+
+function killTingleIntro() {
+	if($(window).width() > 480) {
+		$('.intro-box').css('display', "none");
+	}
+}
+
+setTimeout(moveTingleIn, 5000);
 setTimeout(makeTingleTalk, 7200);
-
-//night/day
-var ocarina = $('.ocarina');
-
-ocarina.on('click', function(e){
-	var bg = $('.background');
-	var degrees = 0;
-
-	if( !bg.hasClass('active')){
-		console.log('check');
-		TweenMax.to(bg, 2.5, {rotation: degrees += 180});
-		bg.addClass('active');
-		return;
-	}
-
-	if( bg.hasClass('active')) {
-		TweenMax.to(bg, 2.5, {rotation: degrees += 180});
-		bg.removeClass('active');
-		return;
-	}
-});
-
-// function incrementDegrees() {
-// 	degrees += 180;
-// 	return degrees
-// }
+setTimeout(killTingleIntro, 11200);
 
 //mobile
 
-function checkForMobile(){
-
+$(window).resize(function(){
 	if($(window).width() <= 480) {
-		console.log('mobile');
-		$('.modal').css('visibility', 'visible');
+		$('.modal-mobile').css('visibility', 'visible');
 	} else {
-		console.log('nope');
-		$('.modal').css('visibility', 'hidden');
+		$('.modal-mobile').css('visibility', 'hidden');
 	}
-}
+})
 
-setInterval(checkForMobile, 1);
+//desktop
 
-
+$(window).resize(function(){
+	if($(window).width() > 480) {
+		$('.modal-desktop').css('visibility', 'visible');
+	} else {
+		$('.modal-desktop').css('visibility', 'hidden');
+	}
+})
 
 
 

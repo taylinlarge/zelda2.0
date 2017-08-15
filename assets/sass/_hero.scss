@@ -5,6 +5,26 @@
 	overflow-x: hidden;
 	position: absolute;
 
+	@media screen and (max-width: 480px) {
+		overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.mobile-map-link {
+		display: none;
+
+		@media screen and (max-width: 480px) {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1000;
+		}
+	}
+
 	.background {
 		position: absolute;
 	    width: 100%;
@@ -12,18 +32,435 @@
 	    left: 0%;
 	    transform-origin: center;
 	    transform: rotate(180deg);
+	    z-index: -1;
+
+	    @media screen and (max-width: 480px) {
+			transform: rotate(0);
+			
+		}
 
 	    img {
 	    	width: 100%;
 	    }
 	}
 
-	.dark-clouds {
+	.banner {
+	    position: absolute;
+	    top: 5%;
+	    left: 10%;
+	    z-index: 5;
+	    width: 80%;
+
+	    @media screen and (max-width: 480px) {
+		    top: 15%;
+		    left: 50%;
+		    width: 100%;
+		    transform: translate(-50%, -50%);
+	    }
+
+	    img {
+	    	width: 100%;
+	    }
+
+	    .hide-on-mobile {
+			@media screen and (max-width: 480px) {
+				display: none;
+			}
+		}
+
+		.hide-on-desktop {
+			@media screen and (min-width: 480px) {
+				display: none;
+			}
+		}
+
+	    .nav-1 {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+			    display: block;
+			    position: absolute;
+			    top: 77%;
+			    right: 4%;
+			    width: 7%;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.white-clouds {
 		position: absolute;
-		width: 110%;
-		top: -100px;
-		left: -50px;
-		z-index: 1;
+	    width: 100%;
+	    top: 0%;
+	    left: 0%;
+	    z-index: 1;
+
+	    @media screen and (max-width: 480px) {
+	    	height: 100%;
+	    }
+
+	    .white-clouds-img {
+	    	 @media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+	    }
+
+		    
+		img {
+			width: 110%;
+			position: relative;
+			top: -100px;
+			left: -24px;
+			z-index: 4;
+			pointer-events: none;
+		
+		   
+		}
+
+		.dark-clouds {
+			position: absolute;
+		    width: 110%;
+		    top: 0%;
+		    left: 0%;
+		    z-index: 1;
+		    pointer-events: none;
+
+		    @media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.dark-clouds-mobile-1 {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+			    display: block;
+			    position: absolute;
+			    top: -23%;
+			    left: 61%;
+			    width: 31%;
+			    filter: brightness(80%);
+			    transform: rotate(-90deg);
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.dark-clouds-mobile-2 {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+				display: block;
+			    position: absolute;
+			    top: -28%;
+			    left: 4%;
+			    width: 33%;
+			    transform: scaleX(-1) rotate(-90deg);
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.triforce {
+		    position: absolute;
+		    top: 18%;
+		    left: 54%;
+		    width: 15%;
+		    transform: translate(-50%, -50%);
+
+		    @media screen and (max-width: 480px) {
+		    	top: 53%;
+			    left: 57%;
+			    width: 35%;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.touch-icon {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+			    display: block;
+			    position: absolute;
+			    top: 64%;
+			    left: 59%;
+			    transform: translate(-50%, -50%);
+			    width: 15%;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.sun {
+		    position: absolute;
+		    width: 13%;
+		    top: 14%;
+		    left: 25%;
+
+		    @media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.moon {
+			position: absolute;
+		    width: 13%;
+		    top: 25%;
+		    left: 55%;
+
+		    @media screen and (max-width: 480px) {
+			    width: 22%;
+			    top: 30%;
+			    left: 23%;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		
+
+		.nav-2 {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+			    display: block;
+			    position: absolute;
+			    top: 45%;
+			    right: 5%;
+			    width: 15%;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.star-1 {
+			position: absolute;
+		    width: 0.5%;
+		    top: 8%;
+		    left: 52%;
+
+		    @media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.star-2 {
+			position: absolute;
+			width: 0.5%;
+			top: 16%;
+			left: 25%;
+
+			@media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.star-3 {
+			position: absolute;
+			width: 0.5%;
+			top: 17%;
+			left: 22%;
+
+			@media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}	
+
+		.star-4 {
+			position: absolute;
+			width: 0.5%;
+			top: 19%;
+			left: 30%;
+
+			@media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.star-5 {
+			position: absolute;
+			width: 0.5%;
+			top: 24%;
+			left: 48%;
+
+			@media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.star-6 {
+			position: absolute;
+			width: 0.5%;
+			top: 19%;
+			left: 70%;
+
+			@media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.star-7 {
+			position: absolute;
+			width: 0.5%;
+			top: 11%;
+			left: 74%;
+
+			@media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.ocarina {
+			position: absolute;
+			width: 10%;
+			top: 20%;
+			left: 66%;
+			z-index: 4;
+
+			@media screen and (max-width: 480px) {
+				width: 17%;
+			    top: 104%;
+			    left: 85%;
+			    z-index: 10;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.cloud-small {
+			position: absolute;
+		    top: 31%;
+		    left: 31%;
+		    width: 10%;
+		    z-index: 0;
+
+		    @media screen and (max-width: 480px) {
+				display: none;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.cloud-med {
+		    position: absolute;
+		    top: 33%;
+		    left: 55%;
+		    width: 18%;
+		    z-index: 0;
+
+		    @media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.cloud-large {
+			position: absolute;
+		    top: 36%;
+		    left: 29%;
+		    width: 35%;
+		    z-index: 0;
+
+		    @media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+.mobile-map {
+	display: none;
+
+	@media screen and (max-width: 480px) {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	.background {
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.triforce-home-button {
+		position: absolute;
+		top: 2%;
+		left: 3%;
+		width: 10%;
+		z-index: 7;
+
+		a {
+			width: 100%;
+			height: 100%;
+		}
 
 		img {
 			width: 100%;
@@ -32,223 +469,107 @@
 
 	.white-clouds {
 		position: absolute;
-		width: 110%;
-		top: -20px;
-		left: -50px;
-		z-index: 1;
+	    width: 100%;
+	    top: 0%;
+	    left: 0%;
+	    z-index: 1;
+	    overflow-x: hidden;
 
+	    @media screen and (max-width: 480px) {
+	    	height: 100%;
+	    }
+
+	    .white-clouds-img {
+	    	 @media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+	    }
+
+		    
 		img {
-			width: 100%;
+			width: 110%;
 			position: relative;
 			top: -100px;
+			left: -24px;
+			z-index: 4;
+			pointer-events: none;
+			
+			@media screen and (max-width: 480px) {
+				top: 0;
+			}
+		   
+		}
+
+		.dark-clouds {
+			position: absolute;
+		    width: 110%;
+		    top: 0%;
+		    left: 0%;
+		    z-index: 1;
+		    pointer-events: none;
+
+		    @media screen and (max-width: 480px) {
+		    	display: none;
+		    }
+
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.ocarina {
+		    position: absolute;
+		    width: 15%;
+		    top: 1%;
+		    left: 87%;
+		    z-index: 100;
+
+			img {
+				width: 100%;
+			}
+		}
+
+
+	
+		.dark-clouds-mobile-1 {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+			    display: block;
+			    position: absolute;
+			    top: -22%;
+			    left: 40%;
+			    width: 31%;
+			    filter: brightness(80%);
+			    transform: rotate(-90deg);
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.dark-clouds-mobile-2 {
+			display: none;
+
+			@media screen and (max-width: 480px) {
+				display: block;
+			    position: absolute;
+			    top: -28%;
+			    left: 29%;
+			    width: 31%;
+			    transform: scaleX(-1) rotate(-90deg);
+			}
+
+			img {
+				width: 100%;
+			}
 		}
 	}
 
-	.banner {
-		position: absolute;
-	    top: 5%;
-	    left: 10%;
-	    z-index: 5;
-	    width: 80%;
-
-	    img {
-	    	width: 100%;
-	    }
-	}
-
-	.tingle {
-	    position: absolute;
-	    top: -134%;
-	    left: 32%;
-	    z-index: 0;
-	    width: 10%;
-
-	    img {
-	    	width: 100%;
-	    }
-	}
-
-	.triforce {
-		position: absolute;
-		top: 60%;
-		left: 50%;
-		width: 15%;
-		transform: translate(-50%, -50%);
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.sun {
-		position: absolute;
-		width: 13%;
-		top: 35%;
-		left: 25%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.moon {
-		position: absolute;
-		width: 13%;
-		top: 85%;
-		left: 55%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.star-1 {
-		position: absolute;
-		width: 0.5%;
-		top: 30%;
-		left: 52%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.star-2 {
-		position: absolute;
-		width: 0.5%;
-		top: 37%;
-		left: 25%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.star-3 {
-		position: absolute;
-		width: 0.5%;
-		top: 87%;
-		left: 22%;
-
-		img {
-			width: 100%;
-		}
-	}	
-
-	.star-4 {
-		position: absolute;
-		width: 0.5%;
-		top: 70%;
-		left: 30%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.star-5 {
-		position: absolute;
-		width: 0.5%;
-		top: 84%;
-		left: 48%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.star-6 {
-		position: absolute;
-		width: 0.5%;
-		top: 91%;
-		left: 70%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.star-7 {
-		position: absolute;
-		width: 0.5%;
-		top: 39%;
-		left: 74%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.ocarina {
-		position: absolute;
-		width: 10%;
-		top: 55%;
-		left: 62%;
-		z-index: 4;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.cloud-small {
-		position: absolute;
-		top: 106%;
-	    left: 31%;
-	    width: 10%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.cloud-med {
-		position: absolute;
-		top: 112%;
-	    left: 55%;
-	    width: 18%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.cloud-large {
-		position: absolute;
-		top: 120%;
-    	left: 29%;
-    	width: 35%;
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.tingle-text {
-		font-family: 'ganon';
-		font-size: 1em;
-		color: white;
-		margin: 0;
-		padding: 10px;
-	}
-
-	.tingle-text-box {
-		position: absolute;
-	    top: 88%;
-	    left: 110%;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-		width: 200px;
-		height: 100px;
-		background-color: black;
-		opacity: 0.7;
-		border-radius: 20px;
-		box-shadow: 0px 0px 5px black;
-	}
-
+	
 }
-
 
 
 
