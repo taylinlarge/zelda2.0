@@ -11,6 +11,35 @@
 		height: 100vh;
 	}
 
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 90000;
+		pointer-events: none;
+
+		@media screen and (max-width: 480px) {
+			display: none;
+		}
+
+		.cursor {
+			position: absolute;
+			width: 100px;
+			height:100px;
+			background-image: url(../img/NewNavi@3x.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			z-index: 50000;
+			transform: translate( -50%, -50%);
+
+			@media screen and (max-width: 480px) {
+				display: none;
+			}
+		}
+	}
+
 	.mobile-map-link {
 		display: none;
 
@@ -26,17 +55,37 @@
 	}
 
 	.background {
-		position: absolute;
-	    width: 100%;
-	    top: -10px;
-	    left: 0%;
-	    transform-origin: center;
-	    transform: rotate(180deg);
-	    z-index: -1;
+		// position: absolute;
+	 //    width: 100%;
+	 //    top: -10px;
+	 //    left: 0%;
+	 //    transform-origin: center;
+	 //    transform: rotate(180deg);
+	 //    z-index: -1;
 
 	    @media screen and (max-width: 480px) {
 			transform: rotate(0);
 			
+		}
+
+		.background-day{
+			position: absolute;
+		    width: 100%;
+		    top: -10px;
+		    left: 0%;
+		    transform-origin: center;
+		    transform: rotate(180deg);
+		    z-index: -2;
+			opacity: 1;
+		}
+
+		.background-night {
+			position: absolute;
+		    width: 100%;
+		    top: -10px;
+		    left: 0%;
+		    z-index: -1;
+			opacity: 1;
 		}
 
 	    img {
@@ -380,6 +429,15 @@
 			img {
 				width: 100%;
 			}
+		}
+
+		.ocarina-click-area {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 18%;
+			left: 66%;
+			z-index: 10;
 		}
 
 		.cloud-small {

@@ -76,6 +76,71 @@
 				width: 100%;
 			}
 		}
+		.death-mountain-box {
+			opacity: 0;
+			visibility: hidden;
+		    position: absolute;
+		    top: -7%;
+		    z-index: 4;
+		    left: 24%;
+		    width: 20%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.castle-box {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 5%;
+		    left: 44%;
+		    width: 20%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.ranch-box {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 16%;
+			left: 11%;
+			width: 20%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.forest-box {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 14%;
+			left: 42%;
+			width: 20%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.lake-box {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 26%;
+			width: 20%;
+			left: 18%;
+
+			img {
+				width: 100%;
+			}
+		}
 	}
 
 

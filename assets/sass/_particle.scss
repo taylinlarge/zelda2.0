@@ -1,0 +1,16 @@
+.wrapper {
+
+	.particle {
+		// background-color: #39BBBB;
+		border-radius: 50%;
+		box-shadow: 0 0 1rem white;
+		position: absolute;
+		z-index: 10000;
+		transform: translate(0,0);
+		transition: all 1s linear;
+	}
+
+	.move-particle {
+		transform: translate(0, 200px);
+	}
+}

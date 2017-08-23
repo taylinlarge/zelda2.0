@@ -11,6 +11,21 @@ $(function(){
 
 });
 
+// switch night to day
+
+
+var ocarina = $('.ocarina-click-area');
+ocarina.on('click', function(e){
+	console.log('hey');
+	var backgroundNight = $('.background-night');
+	if(backgroundNight.css('opacity') == 1) {
+		TweenMax.to(backgroundNight, 1, {opacity: 0});
+	} else {
+		TweenMax.to(backgroundNight, 1, {opacity: 1});
+	}
+})
+
+
 // map hover areas
 
 var lakeArea = $('.lake-click-area');
@@ -55,7 +70,7 @@ forestArea.mouseenter( function(){
 
 forestArea.mouseleave(function(){
 	TweenMax.to('.forest', 1, {scale: 1});
-	TweenMax.to('.forest-box', 0.2, {opacity: 0, visibility: "hiden"});
+	TweenMax.to('.forest-box', 0.2, {opacity: 0, visibility: "hidden"});
 });
 
 mountainArea.mouseenter( function(){
@@ -90,7 +105,7 @@ var tingle = $('.tingle');
 
 function moveTingleIn(){
 	if($(window).width() > 480) {
-		TweenMax.to( tingle, 2, {top: '-44%'});
+		TweenMax.to( tingle, 2, {top: '-60%'});
 	} else {
 		return;
 	}
@@ -99,7 +114,6 @@ function moveTingleIn(){
 function makeTingleTalk() {
 	if($(window).width() > 480) {
 		TweenMax.to('.intro-box', 1, {opacity: 1});
-		tingle.css('position', 'fixed');
 	} else {
 		return;
 	}
@@ -127,19 +141,66 @@ $(window).resize(function(){
 
 //desktop
 
-$(window).resize(function(){
-	if($(window).width() > 480) {
-		$('.modal-desktop').css('visibility', 'visible');
+// $(window).resize(function(){
+// 	if($(window).width() > 480) {
+// 		$('.modal-desktop').css('visibility', 'visible');
+// 	} else {
+// 		$('.modal-desktop').css('visibility', 'hidden');
+// 	}
+// })
+
+// Navi Mouse
+
+function moveNavi(posX, posY){
+	var navi = $('.cursor');
+	navi.css({
+		'top': posY,
+		'left': posX,
+	});
+}
+
+function createParticle(posX, posY){
+	var singleParticle = $('<div>');
+	var size = Math.random() * 10 + 1;
+	var color;
+	var random = Math.floor(Math.random() * 2);
+
+	if(random == 0) {
+		color = '#8BAFCB';
 	} else {
-		$('.modal-desktop').css('visibility', 'hidden');
+		color = '#ffffff';
 	}
-})
 
+	singleParticle.css({
+		'width': size,
+		'height': size,
+		'background-color': color,
+		'top': posY + (Math.random() * 30) - 15 + "px",
+		'left': posX + (Math.random() * 50) - 25 + "px",
+	});
+	singleParticle.addClass('particle');
+	$('.overlay').append(singleParticle);
+	TweenMax.to(singleParticle, 2, {y: "+=400px", opacity: 0, onComplete: function() {
+		$(singleParticle).remove();
+	}})
+}
 
+let cursorX = 0;
+let cursorY = 0;
 
+document.onmousemove = function(e){
+	cursorX = e.pageX;
+	cursorY = e.pageY;	
+}
 
-
-
+$(function(){
+	if( $(window).width() > 480 ){
+		setInterval(function() {
+			createParticle(cursorX, cursorY);
+			moveNavi(cursorX, cursorY);
+		}, 33)
+	}
+});
 
 
 
