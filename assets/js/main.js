@@ -185,8 +185,8 @@ function createParticle(posX, posY){
 	}})
 }
 
-let cursorX = 0;
-let cursorY = 0;
+var cursorX = 0;
+var cursorY = 0;
 
 document.onmousemove = function(e){
 	cursorX = e.pageX;
